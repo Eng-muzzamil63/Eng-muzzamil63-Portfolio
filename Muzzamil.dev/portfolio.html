@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth theme-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzzamil Ansari | AI Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Muzzamil Ansari is an AI Engineer and Full-Stack Developer building scalable applications, intelligent agents, RAG systems, and AI-powered automation.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muzzamil Ansari | AI & Full-Stack Engineering">
+    <meta property="og:description" content="Building intelligent systems that solve real-world problems.">
+    <link rel="canonical" href="https://muzzamil.dev">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-main: #0a0a0a;
+            --bg-surface: rgba(255, 255, 255, 0.02);
+            --text-primary: #ffffff;
+            --text-secondary: #d4d4d8;
+            --text-muted: #a1a1aa;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --accent-glow: rgba(56, 189, 248, 0.1);
+        }
+
+        .theme-dark-midnight {
+            --bg-main: #020617;
+            --bg-surface: rgba(15, 23, 42, 0.6);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: rgba(56, 189, 248, 0.15);
+            --accent-glow: rgba(56, 189, 248, 0.15);
+        }
+
+        .theme-dark-obsidian {
+            --bg-main: #000000;
+            --bg-surface: rgba(20, 20, 20, 0.8);
+            --text-primary: #ededed;
+            --text-secondary: #a3a3a3;
+            --text-muted: #737373;
+            --border-color: rgba(255, 255, 255, 0.12);
+            --accent-glow: rgba(255, 255, 255, 0.08);
+        }
+
+        .theme-dark-emerald {
+            --bg-main: #061a14;
+            --bg-surface: rgba(4, 47, 34, 0.5);
+            --text-primary: #ecfdf5;
+            --text-secondary: #6ee7b7;
+            --text-muted: #34d399;
+            --border-color: rgba(52, 211, 153, 0.2);
+            --accent-glow: rgba(52, 211, 153, 0.15);
+        }
+
+        .theme-light {
+            --bg-main: #f8fafc;
+            --bg-surface: rgba(255, 255, 255, 0.8);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --accent-glow: rgba(14, 165, 233, 0.15);
+        }
+
+        .theme-rose {
+            --bg-main: #fff1f2;
+            --bg-surface: rgba(255, 255, 255, 0.85);
+            --text-primary: #4c0519;
+            --text-secondary: #881337;
+            --text-muted: #9f1239;
+            --border-color: rgba(244, 63, 94, 0.15);
+            --accent-glow: rgba(244, 63, 94, 0.12);
+        }
+
+        .theme-emerald {
+            --bg-main: #ecfdf5;
+            --bg-surface: rgba(255, 255, 255, 0.85);
+            --text-primary: #022c22;
+            --text-secondary: #064e3b;
+            --text-muted: #047857;
+            --border-color: rgba(16, 185, 129, 0.15);
+            --accent-glow: rgba(16, 185, 129, 0.12);
+        }
+
+        .theme-sunset {
+            --bg-main: #fff7ed;
+            --bg-surface: rgba(255, 255, 255, 0.85);
+            --text-primary: #431407;
+            --text-secondary: #7c2d12;
+            --text-muted: #9a3412;
+            --border-color: rgba(249, 115, 22, 0.15);
+            --accent-glow: rgba(249, 115, 22, 0.12);
+        }
+
+        body { 
+            background-color: var(--bg-main); 
+            color: var(--text-secondary); 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        ::selection { background-color: var(--accent-glow); color: var(--text-primary); }
+        
+        .glass-panel { 
+            background: var(--bg-surface); 
+            border: 1px solid var(--border-color); 
+            backdrop-filter: blur(12px); 
+            transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-glow:hover { 
+            border-color: var(--border-color); 
+            box-shadow: 0 10px 30px -10px var(--accent-glow); 
+        }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muzzamil Ansari",
+      "jobTitle": "Junior AI Engineer",
+      "worksFor": { "@type": "Organization", "name": "DataLinkk" },
+      "description": "AI Engineer and Full-Stack Developer",
+      "sameAs": [
+        "https://github.com/Eng-muzzamil63",
+        "https://www.linkedin.com/in/muzzamil-ansari-/"
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased font-sans overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-[var(--border-color)]">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between text-sm">
+            <span class="font-bold tracking-tight text-lg" style="color: var(--text-primary);">Muzzamil.dev</span>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8" style="color: var(--text-muted);">
+                <a href="#what-i-build" class="hover:opacity-100 transition-opacity">Capabilities</a>
+                <a href="#problems" class="hover:opacity-100 transition-opacity">Solutions</a>
+                <a href="#stack" class="hover:opacity-100 transition-opacity">Engineering</a>
+                <a href="#experience" class="hover:opacity-100 transition-opacity">Experience</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <!-- Theme Switcher dropdown/buttons (Multiple Light & Dark Themes) -->
+                <div class="flex items-center gap-1.5 p-1 rounded-full glass-panel border border-[var(--border-color)]">
+                    <button onclick="setTheme('')" class="w-5 h-5 rounded-full bg-[#0a0a0a] border border-white/25 transition-transform hover:scale-110" title="Classic Dark"></button>
+                    <button onclick="setTheme('theme-dark-midnight')" class="w-5 h-5 rounded-full bg-[#020617] border border-sky-500/50 transition-transform hover:scale-110" title="Midnight Blue"></button>
+                    <button onclick="setTheme('theme-dark-obsidian')" class="w-5 h-5 rounded-full bg-[#000000] border border-neutral-600 transition-transform hover:scale-110" title="Obsidian Black"></button>
+                    <button onclick="setTheme('theme-dark-emerald')" class="w-5 h-5 rounded-full bg-[#061a14] border border-emerald-500/50 transition-transform hover:scale-110" title="Dark Emerald"></button>
+                    <button onclick="setTheme('theme-light')" class="w-5 h-5 rounded-full bg-[#f8fafc] border border-slate-300 transition-transform hover:scale-110" title="Light Slate"></button>
+                    <button onclick="setTheme('theme-rose')" class="w-5 h-5 rounded-full bg-[#fff1f2] border border-rose-300 transition-transform hover:scale-110" title="Soft Rose"></button>
+                    <button onclick="setTheme('theme-emerald')" class="w-5 h-5 rounded-full bg-[#ecfdf5] border border-emerald-300 transition-transform hover:scale-110" title="Mint Emerald"></button>
+                    <button onclick="setTheme('theme-sunset')" class="w-5 h-5 rounded-full bg-[#fff7ed] border border-orange-300 transition-transform hover:scale-110" title="Sunset Amber"></button>
+                </div>
+
+                <a href="#contact" class="px-4 py-2 font-medium rounded-lg transition-colors shadow-sm" style="background-color: var(--text-primary); color: var(--bg-main);">Let's Build</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="md:hidden" style="color: var(--text-muted);" aria-label="Open Menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-32 px-6 max-w-7xl mx-auto flex flex-col gap-32 pb-32">
+        
+        <!-- HERO SECTION -->
+        <section class="flex flex-col lg:flex-row items-center justify-between gap-16 relative">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] opacity-[0.03] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10 h-[500px]"></div>
+            
+            <div class="flex-1 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs font-mono shadow-xs" style="color: var(--text-muted);">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+                    Junior AI Engineer @ DataLinkk
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter leading-[1.1]" style="color: var(--text-primary);">
+                    Building intelligent systems <span style="color: var(--text-muted);">that solve real-world problems.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    AI Engineer | Full-Stack Developer | AI Automation Builder<br><br>
+                    I combine full-stack engineering, artificial intelligence, automation, and modern software architecture to build scalable applications and intelligent systems that solve meaningful business problems.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#what-i-build" class="px-6 py-3 font-medium rounded-lg transition-all text-center shadow-sm" style="background-color: var(--text-primary); color: var(--bg-main);">
+                        Explore My Capabilities
+                    </a>
+                    <a href="#contact" class="px-6 py-3 glass-panel font-medium rounded-lg transition-all text-center shadow-xs" style="color: var(--text-primary);">
+                        Let's Build Something
+                    </a>
+                </div>
+                
+                <div class="flex justify-center lg:justify-start gap-6 pt-4 text-sm font-mono" style="color: var(--text-muted);">
+                    <a href="https://github.com/Eng-muzzamil63" target="_blank" class="hover:opacity-100 transition-opacity">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/muzzamil-ansari-/" target="_blank" class="hover:opacity-100 transition-opacity">LinkedIn ↗</a>
+                    <a href="mailto:engmuzzamil63@gmail.com" class="hover:opacity-100 transition-opacity">Email ↗</a>
+                </div>
+            </div>
+
+            <!-- Profile Image / Visual -->
+            <div class="w-full max-w-md lg:w-[450px] aspect-square relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-indigo-500/10 rounded-3xl blur-3xl"></div>
+                <div class="relative h-full w-full glass-panel rounded-3xl p-3 shadow-xl overflow-hidden flex items-center justify-center group">
+                    <img src="profile.jpg" alt="Muzzamil Ansari" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel shadow-lg flex items-center justify-between border border-[var(--border-color)]">
+                        <div>
+                            <span class="block font-medium text-sm" style="color: var(--text-primary);">Muzzamil Ansari</span>
+                            <span class="block text-xs font-mono font-medium" style="color: var(--text-muted);">AI Engineer</span>
+                        </div>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I BUILD -->
+        <section id="what-i-build" class="space-y-12 scroll-mt-24">
+            <div class="space-y-4">
+                <h2 class="text-3xl font-semibold tracking-tight" style="color: var(--text-primary);">What I Build</h2>
+                <p class="max-w-2xl">Engineering solutions that span from traditional full-stack web applications to complex, multi-agent AI ecosystems.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Full-Stack -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">💻</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Full-Stack Applications</h3>
+                    <p class="text-sm">Complete applications from frontend to backend. Modern responsive web applications, SaaS platforms, admin dashboards, and REST APIs with secure authentication.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>Frontend</span> <span>→</span> <span>API</span> <span>→</span> <span>Database</span>
+                    </div>
+                </div>
+
+                <!-- AI-Powered Apps -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">🧠</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">AI-Powered Applications</h3>
+                    <p class="text-sm">Enhancing traditional software with intelligence. AI assistants, intelligent dashboards, recommendation systems, and decision-support systems.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>App</span> <span>→</span> <span class="font-medium">AI Layer</span> <span>→</span> <span>Action</span>
+                    </div>
+                </div>
+
+                <!-- Agentic AI -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">🤖</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Agentic AI Systems</h3>
+                    <p class="text-sm">Intelligent systems capable of reasoning and executing workflows. Multi-agent systems, tool calling, autonomous execution, and human-in-the-loop validation.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>Goal</span> <span>→</span> <span>Reasoning</span> <span>→</span> <span>Tools</span>
+                    </div>
+                </div>
+
+                <!-- Enterprise RAG -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">📚</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Enterprise RAG</h3>
+                    <p class="text-sm">Making organizational knowledge searchable. Semantic search, vector databases, GraphRAG, context engineering, and internal knowledge assistants.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>Query</span> <span>→</span> <span>Retrieval</span> <span>→</span> <span>Context</span>
+                    </div>
+                </div>
+
+                <!-- Document Intelligence -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">📄</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">Document Intelligence</h3>
+                    <p class="text-sm">Transforming unstructured documents into structured data. Information extraction, contract analysis, OCR parsing, and compliance document processing.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>PDF/Doc</span> <span>→</span> <span>AI Extraction</span> <span>→</span> <span>JSON Data</span>
+                    </div>
+                </div>
+
+                <!-- AI Automation -->
+                <div class="glass-panel p-6 rounded-xl space-y-6 hover-glow transition-all">
+                    <div class="h-10 w-10 rounded-lg glass-panel flex items-center justify-center shadow-xs">⚡</div>
+                    <h3 class="text-xl font-semibold" style="color: var(--text-primary);">AI Automation</h3>
+                    <p class="text-sm">Automating repetitive business processes. CRM automation, lead enrichment, intelligent email personalization, and cross-platform API workflows.</p>
+                    <div class="text-[10px] font-mono flex flex-wrap gap-2 items-center p-3 rounded-lg glass-panel border border-[var(--border-color)]" style="color: var(--text-muted);">
+                        <span>Trigger</span> <span>→</span> <span>AI Evaluation</span> <span>→</span> <span>CRM/API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEMS I SOLVE -->
+        <section id="problems" class="space-y-12 scroll-mt-24">
+            <div class="space-y-4 border-b border-[var(--border-color)] pb-6">
+                <h2 class="text-3xl font-semibold tracking-tight" style="color: var(--text-primary);">Problems I Solve</h2>
+                <p class="max-w-2xl">Technology is only valuable when it solves a specific business constraint.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">1. Manual Operations & Wasted Time</h4>
+                    <p class="text-sm">Businesses waste employee time on repetitive administrative tasks.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> AI + Automation + APIs + Workflow Systems
+                    </div>
+                </div>
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">2. Unstructured Business Data</h4>
+                    <p class="text-sm">Companies have large amounts of locked data in PDFs, emails, and reports.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> Document Intelligence + AI Search + Knowledge Systems
+                    </div>
+                </div>
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">3. Information Silos & Discovery</h4>
+                    <p class="text-sm">Employees spend hours searching through disconnected internal documentation.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> Enterprise RAG + Semantic Search + GraphRAG
+                    </div>
+                </div>
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">4. Customer Support Scaling</h4>
+                    <p class="text-sm">High volume of repetitive inquiries overwhelming human support teams.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> AI Assistants + Agentic Workflows + Human Escalation
+                    </div>
+                </div>
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">5. Repetitive Sales Research</h4>
+                    <p class="text-sm">Sales teams manually researching leads and writing generic outreach.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> AI Lead Research + Data Enrichment + CRM Automation
+                    </div>
+                </div>
+                <div class="space-y-2 glass-panel p-6 rounded-xl">
+                    <h4 class="font-semibold" style="color: var(--text-primary);">6. Unreliable AI Prototypes</h4>
+                    <p class="text-sm">AI demos that work locally but hallucinate or fail in production environments.</p>
+                    <div class="text-xs font-mono pt-2 flex items-center gap-2 font-medium" style="color: var(--text-muted);">
+                        <span>↳ Solution:</span> Observability + Guardrails + Structured Outputs + LLMOps
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSINESS & ENTERPRISE SOLUTIONS -->
+        <section class="grid lg:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <h3 class="text-2xl font-semibold tracking-tight" style="color: var(--text-primary);">Enterprise Engineering</h3>
+                <p class="text-sm">Engineering problems I am prepared to solve in modern technology organizations operating at scale.</p>
+                <ul class="space-y-4">
+                    <li class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="font-semibold block" style="color: var(--text-primary);">AI Infrastructure</span>
+                        <span class="text-sm">LLM application infrastructure, agent orchestration, and evaluation pipelines.</span>
+                    </li>
+                    <li class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="font-semibold block" style="color: var(--text-primary);">Developer Platforms</span>
+                        <span class="text-sm">Internal tooling, API platforms, and engineering productivity systems.</span>
+                    </li>
+                    <li class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="font-semibold block" style="color: var(--text-primary);">Scalable Web Systems</span>
+                        <span class="text-sm">Full-stack SaaS, secure authentication, and cloud-ready database architectures.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="space-y-6">
+                <h3 class="text-2xl font-semibold tracking-tight" style="color: var(--text-primary);">Business Solutions</h3>
+                <p class="text-sm">Applying technical architecture to direct business unit operations.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="text-sm font-semibold block" style="color: var(--text-primary);">Sales & CRM</span>
+                        <span class="text-xs mt-1 block" style="color: var(--text-muted);">Enrichment & Outreach</span>
+                    </div>
+                    <div class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="text-sm font-semibold block" style="color: var(--text-primary);">Customer Support</span>
+                        <span class="text-xs mt-1 block" style="color: var(--text-muted);">Knowledge Routing</span>
+                    </div>
+                    <div class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="text-sm font-semibold block" style="color: var(--text-primary);">Finance & Legal</span>
+                        <span class="text-xs mt-1 block" style="color: var(--text-muted);">Contract/Doc AI</span>
+                    </div>
+                    <div class="glass-panel p-5 rounded-xl shadow-xs">
+                        <span class="text-sm font-semibold block" style="color: var(--text-primary);">Operations</span>
+                        <span class="text-xs mt-1 block" style="color: var(--text-muted);">Internal Workflows</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY ARCHITECTURE -->
+        <section id="stack" class="space-y-12 scroll-mt-24">
+            <h2 class="text-3xl font-semibold tracking-tight border-b border-[var(--border-color)] pb-4" style="color: var(--text-primary);">Technology Architecture</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-lg font-semibold flex items-center gap-2" style="color: var(--text-primary);">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span> Full-Stack Lifecycle
+                    </h3>
+                    <div class="flex flex-col gap-3 font-mono text-xs">
+                        <div class="flex justify-between items-center p-3.5 glass-panel rounded-lg">
+                            <span style="color: var(--text-muted);">Frontend</span>
+                            <span class="font-medium" style="color: var(--text-primary);">React / Next.js / TypeScript</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3.5 glass-panel rounded-lg">
+                            <span style="color: var(--text-muted);">Backend</span>
+                            <span class="font-medium" style="color: var(--text-primary);">Python / FastAPI / Node.js</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3.5 glass-panel rounded-lg">
+                            <span style="color: var(--text-muted);">Data</span>
+                            <span class="font-medium" style="color: var(--text-primary);">PostgreSQL / Vector DBs</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3.5 glass-panel rounded-lg shadow-xs">
+                            <span class="font-semibold" style="color: var(--text-primary);">AI Layer</span>
+                            <span class="font-medium" style="color: var(--text-primary);">LLMs / Agents / RAG</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3.5 glass-panel rounded-lg">
+                            <span style="color: var(--text-muted);">Automation</span>
+                            <span class="font-medium" style="color: var(--text-primary);">n8n / Make / APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-lg font-semibold flex items-center gap-2" style="color: var(--text-primary);">
+                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> AI Engineering Stack
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="glass-panel p-4 rounded-xl">
+                            <span class="text-[10px] font-mono uppercase font-semibold" style="color: var(--text-muted);">Intelligence & Agents</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Generative AI</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Agentic Workflows</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Tool Calling</span>
+                            </div>
+                        </div>
+                        <div class="glass-panel p-4 rounded-xl">
+                            <span class="text-[10px] font-mono uppercase font-semibold" style="color: var(--text-muted);">Data & Context</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Enterprise RAG</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Document Intelligence</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">GraphRAG</span>
+                            </div>
+                        </div>
+                        <div class="glass-panel p-4 rounded-xl">
+                            <span class="text-[10px] font-mono uppercase font-semibold" style="color: var(--text-muted);">Reliability & Production</span>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">AI Evaluation</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">Observability</span>
+                                <span class="px-2.5 py-1 text-xs glass-panel rounded-md font-medium shadow-xs">LLMOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATALINKK EXPERIENCE -->
+        <section id="experience" class="scroll-mt-24 glass-panel p-8 md:p-12 rounded-2xl relative overflow-hidden shadow-md">
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 border-b border-[var(--border-color)] pb-6">
+                <div>
+                    <h3 class="text-2xl font-bold" style="color: var(--text-primary);">Junior AI Engineer</h3>
+                    <p class="font-mono text-sm mt-1 font-semibold" style="color: var(--text-muted);">@ DataLinkk</p>
+                </div>
+                <span class="px-3 py-1 glass-panel border border-[var(--border-color)] rounded-full text-xs font-medium" style="color: var(--text-secondary);">Current Role</span>
+            </div>
+            
+            <p class="leading-relaxed max-w-3xl mb-8">
+                Working within a production environment focused on business-oriented AI solutions. Bridging the gap between software engineering and artificial intelligence to build systems that automate repetitive operations, process documents, and retrieve organizational knowledge.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="space-y-1 p-4 rounded-xl glass-panel border border-[var(--border-color)]">
+                    <span class="block text-[10px] uppercase font-mono font-semibold" style="color: var(--text-muted);">Core Focus</span>
+                    <span class="block text-sm font-medium" style="color: var(--text-primary);">AI Engineering</span>
+                </div>
+                <div class="space-y-1 p-4 rounded-xl glass-panel border border-[var(--border-color)]">
+                    <span class="block text-[10px] uppercase font-mono font-semibold" style="color: var(--text-muted);">Systems</span>
+                    <span class="block text-sm font-medium" style="color: var(--text-primary);">Agentic Workflows</span>
+                </div>
+                <div class="space-y-1 p-4 rounded-xl glass-panel border border-[var(--border-color)]">
+                    <span class="block text-[10px] uppercase font-mono font-semibold" style="color: var(--text-muted);">Data</span>
+                    <span class="block text-sm font-medium" style="color: var(--text-primary);">Document Intelligence</span>
+                </div>
+                <div class="space-y-1 p-4 rounded-xl glass-panel border border-[var(--border-color)]">
+                    <span class="block text-[10px] uppercase font-mono font-semibold" style="color: var(--text-muted);">Infrastructure</span>
+                    <span class="block text-sm font-medium" style="color: var(--text-primary);">Software Engineering</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY / RECRUITER -->
+        <section class="py-12 border-y border-[var(--border-color)]">
+            <div class="text-center space-y-6 max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-semibold tracking-tight" style="color: var(--text-primary);">Engineering Philosophy</h2>
+                <div class="flex flex-wrap justify-center items-center gap-3 font-mono text-xs font-semibold" style="color: var(--text-muted);">
+                    <span>Learn</span> <span>→</span> 
+                    <span>Build</span> <span>→</span> 
+                    <span>Break</span> <span>→</span> 
+                    <span>Debug</span> <span>→</span> 
+                    <span>Understand</span> <span>→</span> 
+                    <span>Improve</span>
+                </div>
+                <p>
+                    I don't focus only on making AI demos work. I focus on understanding the business problem, choosing the right architecture, building reliable full-stack systems, evaluating their behavior, and continuously improving them.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 glass-panel rounded-xl text-center shadow-xs">
+                    <h4 class="font-semibold mb-2" style="color: var(--text-primary);">Software + AI Integration</h4>
+                    <p class="text-xs leading-relaxed">I build complete applications rather than isolated AI experiments. I understand how to integrate models into real software systems.</p>
+                </div>
+                <div class="p-6 glass-panel rounded-xl text-center shadow-xs">
+                    <h4 class="font-semibold mb-2" style="color: var(--text-primary);">Problem-First Architecture</h4>
+                    <p class="text-xs leading-relaxed">I focus on the business constraint before choosing the technology, identifying workflows that can actually be improved with automation.</p>
+                </div>
+                <div class="p-6 glass-panel rounded-xl text-center shadow-xs">
+                    <h4 class="font-semibold mb-2" style="color: var(--text-primary);">Product Thinking</h4>
+                    <p class="text-xs leading-relaxed">I evaluate how engineering decisions create business value, continually exploring emerging technologies and production AI practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CTA -->
+        <section id="contact" class="py-20 text-center space-y-8 glass-panel rounded-3xl shadow-sm border border-[var(--border-color)]">
+            <h2 class="text-4xl font-semibold tracking-tight" style="color: var(--text-primary);">Ready to build reliable systems?</h2>
+            <p class="max-w-md mx-auto">
+                Looking for an engineer who understands full-stack web applications, AI models, and the business logic connecting them?
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="mailto:engmuzzamil63@gmail.com" class="px-8 py-3 font-medium rounded-lg transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2" style="background-color: var(--text-primary); color: var(--bg-main);">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="border-t border-[var(--border-color)] py-12 text-center text-xs font-mono" style="color: var(--text-muted);">
+        <p class="font-semibold text-sm mb-2" style="color: var(--text-primary);">Muzzamil Ansari</p>
+        <p>AI Engineer | Full-Stack Developer | AI Automation Builder</p>
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="https://github.com/Eng-muzzamil63" target="_blank" class="hover:opacity-100 transition-opacity">GitHub</a>
+            <a href="https://www.linkedin.com/in/muzzamil-ansari-/" target="_blank" class="hover:opacity-100 transition-opacity">LinkedIn</a>
+            <a href="mailto:engmuzzamil63@gmail.com" class="hover:opacity-100 transition-opacity">Email</a>
+        </div>
+        <p class="mt-8 opacity-75">© 2026 Muzzamil Ansari. Designed for Production.</p>
+    </footer>
+
+    <!-- Theme Switcher Script -->
+    <script>
+        function setTheme(themeClass) {
+            const root = document.documentElement;
+            // Remove any existing theme- classes
+            root.className = 'scroll-smooth ' + themeClass;
+            localStorage.setItem('portfolio-theme', themeClass);
+        }
+
+        // Load saved theme on startup
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            if (savedTheme !== null) {
+                setTheme(savedTheme);
+            }
+        });
+    </script>
+
+</body>
+</html>
